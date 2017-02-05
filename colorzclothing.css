@@ -1,0 +1,394 @@
+body{
+
+}
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+
+
+#maindiv{
+	width: 100%;
+}
+
+#navdiv{
+	opacity: 0.83;
+	filter: (opacity=70);
+}
+
+#navdiv ul{
+	width:100%;
+	height: 80px;
+	background: black;
+	position: fixed;
+	z-index: 0;
+ 	padding-top: 20px;
+}
+
+#navdiv ul a{
+	text-decoration: none;
+	color: white;
+	padding: 30px;
+
+}
+
+#navdiv ul li{
+	padding-top: 20px;
+	padding-bottom: 20px;
+	list-style-type: none;
+	display: inline-block;
+	float: right;
+	color: white;
+	font-family: "Brush Script MT", cursive;
+	font-size: 20px;
+	cursor: pointer;
+}
+
+#navdiv ul li:hover{
+	/*background:#737271;*/
+	border-bottom:white solid 2px;
+	border-top: white solid 2px;
+}
+
+#navdiv ul li:active {
+	color:black; 
+	background-color:white; 
+	text-decoration:underline}
+
+#navdiv ul li:visited {
+	color:green; 
+	background-color:white; 
+	text-decoration:none
+}
+
+#navdiv h1{
+	float: left;
+	cursor: pointer;
+	margin-left: 20px;
+
+}
+
+#frontpage{
+
+}
+
+#greeting{
+	position:absolute;
+	top:50%;
+	left:50%;
+	transform:translate(-50%,-50%);
+	-ms-transform:translate(-50%,-50%)
+}
+#greeting h2{
+	vertical-align: middle;
+	text-align: center;
+	font-size: 60px;
+	color:white;
+	font-family: "Brush Script MT", cursive;
+	position: relative;
+	text-shadow: -3px 0 black, 0 3px black, 3px 0 black, 0 -3px black;
+}
+
+#message{
+	width: 100%;
+	background: white;
+	
+
+}
+
+#message h3{
+	color: white;
+	font-family: "Brush Script MT", cursive;
+	font-size: 50px;
+	text-align: center;
+	vertical-align: middle;
+	position: relative;
+}
+
+#products{
+	width: 100%;
+	border-bottom: solid 2px;
+
+
+}
+
+#products h2{
+	font-size: 40px;
+	border-bottom: solid 2px;
+	font-family: "Brush Script MT", cursive;
+	padding-left: 25px;
+}
+
+#items {
+    max-width:100%;
+    margin:0 auto; /*center aligned*/
+    font-size:0; /* Remember to change it back to normal font size if have captions */
+    list-style:none;
+    padding-bottom: 25px;
+    padding-top: 25px;
+    padding-left: 100px;
+    padding-right: 100px;
+
+
+    
+}
+#items li {
+    display: inline-block;
+    *display:inline;/*for IE6 - IE7*/
+    width:20%;
+    vertical-align:middle;
+    box-sizing:border-box;
+    padding: 25px;
+}
+        
+/* The wrapper for each item */
+.product-cell {
+    /*margin:12px;
+    box-shadow:0 0 6px rgba(0,0,0,0.3);*/
+    display:block;
+    position: relative;
+    overflow:hidden;
+    height: width;
+    z-index: -1;
+
+}
+        
+/* image layer */
+.product-img {
+    display:block;
+    width: 100%;
+    height: auto;
+    border:none;
+    transform:scale(1);
+    transition:all 1s;
+    position: relative;
+}
+
+#items li:hover .product-img {
+    transform:scale(1.05);
+}
+        
+/* overlay layer */
+.product-overlay {
+    position: absolute;
+    display:block;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin: auto;
+    background: #a1a09e no-repeat center 20%;
+    background-size:50px 50px;
+    opacity:0;
+    filter:alpha(opacity=0);/*For IE6 - IE8*/
+    transition:all 0.6s;
+}
+#items li:hover .product-overlay {
+    opacity:0.8;
+}
+
+/* If there are captions */
+.product-text {
+    display:block;
+    box-sizing:border-box;
+    position:absolute;
+    left:0;
+    width:100%;
+    text-align:center;
+    text-transform:capitalize;
+    font-size:12px;
+    font-weight:bold;
+    font-family: 'Oswald', sans-serif;
+    font-weight:normal!important;
+    top:40%;
+    color:white;
+    opacity:0;
+    filter:alpha(opacity=0);/*For older IE*/
+    transform:translateY(-20px);
+    transition:all .3s;
+}
+#items li:hover .product-text {
+    transform:translateY(0px);
+    opacity:0.9;
+}
+
+@media (max-width: 9000px) {
+    #items li {
+        width:20%;
+    }
+}
+
+@media (max-width: 700px) {
+    #items li {
+        width:33.33%;
+    }
+}
+
+@media (max-width: 550px) {
+    #items li {
+        width:50%;
+    }
+}
+
+#about{
+	width: 100%;
+	height: 740px;
+}
+
+#about h4{
+	font-color:black;
+	font-size: 40px;
+	border-bottom: solid 2px;
+	font-family: "Brush Script MT", cursive;
+	padding-left: 25px;
+}
+
+#about p{
+	text-align: center;
+	font-size: 14px;
+	padding: 100px;
+	color: black;
+	background-color: white;
+	font-family:‘Courier New’, Courier, monospace;
+	line-height: 50px;
+	border-bottom: solid 2px;
+	display: block;
+}
+
+#about ul{
+	max-width: 100%;
+	display: block;
+	background-color: black;
+}
+
+#about ul li{
+	max-width: 100%;
+	display: inline-table;
+    *display:inline;/*for IE6 - IE7*/
+    width:33%;
+    vertical-align:top;
+    box-sizing:border-box;
+    border-bottom: solid 2px;
+
+}
+
+#about ul li img{
+	display:block;
+    width: 100%;
+    height: 275px;
+    
+}
+
+#contact{
+	display: block;
+	width: 100%;
+	height: 50px;
+	border-bottom: solid 2px;
+}
+
+#contact h5{
+	font-color:black;
+	font-size: 40px;
+	font-family: "Brush Script MT", cursive;
+	padding-left: 25px;
+}
+
+#form label {
+	display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+    font-family: "Brush Script MT", cursive;
+}
+
+form {
+	align-self: left;
+	width: 439px;
+	text-align: left;
+    margin-left: 25px;
+    padding-bottom: 50px;
+
+}
+
+input, textarea {
+	width:33%;
+	height:27px;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#3a3a3a;
+	width:439px;
+    height:27px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+
+textarea {
+	height:213px;
+}
+
+
+
+input[type = submit] {
+	display: block;
+	font-family: "Brush Script MT", cursive;
+    width:127px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+    font-size: 18px;
+}
+input[type=submit]:hover {
+	background-color: black;
+	color: white;
+	opacity:.9;
+}
+
+footer {
+	background-color: black;
+}
+
+footer ul {
+	padding: 20px;
+
+}
+
+footer ul li {
+	position: relative;
+	padding-left: 10px;
+	font-family: "Brush Script MT", cursive;
+	vertical-align: middle;
+	color: white;
+	list-style-type: none;
+	display: inline-block;
+}
+
+
+#socialLogos {
+
+}
+
+#contactMessage {
+	padding-left: 25px;
+	position: relative;
+	width: 40%;
+	font-family: "Brush Script MT", cursive;
+	font-size: 24px;
+	display: inline-block;
+}
+
+
+
+
+
+
